@@ -1,0 +1,31 @@
+{
+  "name": "full-stack-react-app-tutorial",
+  "version": "1.0.0",
+  "description": "full stack React app tutorial",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dgonza49/full-stack-react-app-tutorial.git"
+  },
+  "keywords": [
+    "react"
+  ],
+  "author": "Daniel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dgonza49/full-stack-react-app-tutorial/issues"
+  },
+  "homepage": "https://github.com/dgonza49/full-stack-react-app-tutorial#readme",
+  "devDependencies": {
+    "concurrently": "^5.3.0",
+    "nodemon": "^2.0.4"
+  },
+  "dependencies": {
+    "cookie-parser": "^1.4.5",
+    "express": "^4.17.1",
+    "pg": "^8.3.3"
+  }
+}
