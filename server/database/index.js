@@ -1,3 +1,9 @@
+let pg = require('pg');
+if (process.env.DATABASE_URL) {
+    pg.defaults.ssl = true;
+}
+
+
 var { Pool } = require('pg');
 
 const CONNECTION_STRING = process.env.DATABASE_URL || 'postgresql://postgres:L0g1cal@localhost:5432/weather-db';
