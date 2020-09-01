@@ -1,10 +1,11 @@
-var  { Pool } = require('pg');
+var { Pool } = require('pg');
 
 const CONNECTION_STRING = process.env.DATABASE_URL || 'postgresql://postgres:L0g1cal@localhost:5432/weather-db';
 const SSL = process.env.NODE_ENV === 'production';
 
-class Database{
-    constructor() {
+
+class Database {
+    constructor () {
         this._pool = new Pool({
             connectionString: CONNECTION_STRING,
             ssl: SSL
@@ -14,9 +15,10 @@ class Database{
             console.error('Unexpected error on idle PostgreSQL client.', err);
             process.exit(-1);
         });
+
     }
 
-    query(query, ...args){
+    query (query, ...args) {
         this._pool.connect((err, client, done) => {
             if (err) throw err;
             const params = args.length === 2 ? args[0] : [];
@@ -33,9 +35,9 @@ class Database{
         });
 
     }
-    end() {
-        this._pool.end();
 
+    end () {
+        this._pool.end();
     }
 }
 
